@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    let signInConfig = GIDConfiguration.init(clientID: "450989300339-q3uoiji9443ov4ankf6e9kp9lv0h29t7.apps.googleusercontent.com")
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        FirebaseApp.configure()
         return true
     }
 
